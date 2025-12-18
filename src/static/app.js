@@ -492,17 +492,16 @@ document.addEventListener("DOMContentLoaded", () => {
     switch(platform) {
       case 'facebook':
         shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+        window.open(shareLink, '_blank', 'width=600,height=400');
         break;
       case 'twitter':
         shareLink = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`;
+        window.open(shareLink, '_blank', 'width=600,height=400');
         break;
       case 'email':
         shareLink = `mailto:?subject=${encodeURIComponent(`Check out ${name}`)}&body=${encodedText}`;
+        window.location.href = shareLink;
         break;
-    }
-
-    if (shareLink) {
-      window.open(shareLink, '_blank', 'width=600,height=400');
     }
   }
 
@@ -561,7 +560,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="share-icon">f</span>
         </button>
         <button class="share-btn share-twitter" data-platform="twitter" title="Share on Twitter">
-          <span class="share-icon">𝕏</span>
+          <span class="share-icon">X</span>
         </button>
         <button class="share-btn share-email" data-platform="email" title="Share via Email">
           <span class="share-icon">✉</span>
