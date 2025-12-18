@@ -30,6 +30,14 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+
+  /* Social media colors */
+  --facebook-primary: #1877f2;
+  --facebook-hover: #145dbf;
+  --twitter-primary: #000000;
+  --twitter-hover: #333333;
+  --email-primary: #ea4335;
+  --email-hover: #c5371d;
 }
 
 * {
@@ -236,6 +244,72 @@ section h3 {
 
 .capacity-available .capacity-bar-fill {
   background-color: var(--success);
+}
+
+/* Share buttons */
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+  padding: 6px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.share-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.share-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.share-icon {
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.share-facebook {
+  background-color: var(--facebook-primary);
+  color: white;
+}
+
+.share-facebook:hover {
+  background-color: var(--facebook-hover);
+  transform: scale(1.1);
+}
+
+.share-twitter {
+  background-color: var(--twitter-primary);
+  color: white;
+}
+
+.share-twitter:hover {
+  background-color: var(--twitter-hover);
+  transform: scale(1.1);
+}
+
+.share-email {
+  background-color: var(--email-primary);
+  color: white;
+}
+
+.share-email:hover {
+  background-color: var(--email-hover);
+  transform: scale(1.1);
 }
 
 /* Participants list */
